@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.reminisce_ticketing.MainActivity;
 import com.example.reminisce_ticketing.R;
 import com.example.reminisce_ticketing.ui.scan_with_camera.ScanWithCamera;
 
