@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ReminisceTicketing</string>
+    <!-- to toggle the open close button of the navigation drawer -->
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="description_value">Get ready to let loose and immerse yourself in an unforgettable musical experience at our electrifying Music Party! Join us as we turn up the volume, creating a pulsating atmosphere that will make your heart race and your feet move to the rhythm. With a lineup of talented DJs and live performers, we\'re bringing the hottest beats and chart-topping hits across a variety of genres.\nStep onto the dance floor and feel the energy surge through your veins as the speakers blast vibrant tunes. Our state-of-the-art sound system.
+ </string>
+    <string name="title_activity_scan_result">ScanResult</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+</resources>
