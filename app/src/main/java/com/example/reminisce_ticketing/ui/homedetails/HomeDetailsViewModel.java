@@ -4,20 +4,14 @@ import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
 
-import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.ViewModel;
 
-import com.example.reminisce_ticketing.MainActivity;
-import com.example.reminisce_ticketing.SharedPref;
 import com.example.reminisce_ticketing.apiservice.ApiInterface;
 import com.example.reminisce_ticketing.apiservice.RetrofitClient;
 import com.example.reminisce_ticketing.databinding.ActivityHomeDetailsBinding;
-import com.example.reminisce_ticketing.databinding.ActivityLoginBinding;
 import com.example.reminisce_ticketing.model.EventDetailsModel;
 import com.example.reminisce_ticketing.model.UserLoginReq;
-import com.example.reminisce_ticketing.model.UserLoginRespo;
 import com.example.reminisce_ticketing.ui.scan_with_camera.ScanWithCamera;
 
 import retrofit2.Call;

@@ -1,4 +1,4 @@
-package com.example.reminisce_ticketing;
+package com.example.reminisce_ticketing.utils;
 
 import static android.content.Context.MODE_PRIVATE;
 

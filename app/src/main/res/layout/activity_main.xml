@@ -1,4 +1,5 @@
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
         <variable
@@ -9,23 +10,26 @@
     <androidx.drawerlayout.widget.DrawerLayout
         android:id="@+id/drawerLayout"
         android:layout_width="match_parent"
-        android:background="@color/white"
+        android:background="@color/bg_color"
         android:layout_height="match_parent">
 
         <!-- Main content layout -->
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:orientation="vertical"
             android:layout_height="match_parent">
 
             <LinearLayout
+                android:id="@+id/ll_main"
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
-                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:layout_marginRight="@dimen/_12sdp"
-                android:background="@color/white"
+                android:background="@color/bg_color"
                 android:layout_marginLeft="@dimen/_12sdp"
                 android:layout_marginBottom="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 android:layout_height="@dimen/_40sdp">
 
                 <ImageView
@@ -46,25 +50,29 @@
                     android:fontFamily="@font/nunitosans_10pt_bold"
                     android:textColor="@color/black"
                     android:text="Home"
-                    android:textSize="@dimen/_18sdp" />
+                    android:textSize="@dimen/_15ssp" />
 
                 <ImageView
                     android:id="@+id/iv_notification"
                     android:layout_width="@dimen/_35sdp"
                     android:layout_height="@dimen/_35sdp"
                     android:layout_gravity="center"
+                    android:visibility="gone"
                     android:src="@drawable/ic_notification" />
             </LinearLayout>
 
             <FrameLayout
                 android:id="@+id/fragmentContainer"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_45sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_main"/>
 
 
             <!-- Add your main content here -->
 
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <com.google.android.material.navigation.NavigationView
             android:id="@+id/navigationView"

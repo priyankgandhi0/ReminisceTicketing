@@ -25,16 +25,9 @@ import com.example.reminisce_ticketing.ui.change_password.ChangePassword;
 import com.example.reminisce_ticketing.ui.home.HomeFragment;
 import com.example.reminisce_ticketing.ui.notification.Notification;
 import com.example.reminisce_ticketing.ui.scan_with_camera.ScanWithCamera;
-import com.example.reminisce_ticketing.utils.FragmentUtils;
-import com.google.android.material.navigation.NavigationView;
-import okhttp3.ResponseBody;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
+
 
 public class MainActivity extends AppCompatActivity {
-    public DrawerLayout drawerLayout;
-    NavigationView navigationView;
 
     ActivityMainBinding binding;
     MainActivityViewModel viewModel;
@@ -45,11 +38,7 @@ public class MainActivity extends AppCompatActivity {
 //        setContentView(R.layout.activity_main);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         viewModel = new ViewModelProvider(this, new GeneralViewModelFactory<>(binding, this)).get(MainActivityViewModel.class);
-        drawerLayout = findViewById(R.id.drawerLayout);
-        navigationView = findViewById(R.id.navigationView);
         initView();
-
-
     }
 
 
@@ -72,21 +61,21 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.home_item).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                drawerLayout.close();
+                binding.drawerLayout.close();
                 viewModel.openFragment(HomeFragment.class, Constants.HOME_FRAGMENTS);
             }
         });
         findViewById(R.id.logout).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                drawerLayout.close();
+                binding.drawerLayout.close();
                 viewModel.showLogoutDialog();
             }
         });
         findViewById(R.id.scan_item).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                drawerLayout.close();
+                binding.drawerLayout.close();
                 Intent intent = new Intent(MainActivity.this, ScanWithCamera.class);
                 startActivity(intent);
             }
@@ -94,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.change_password).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                drawerLayout.close();
+                binding.drawerLayout.close();
                 Intent intent = new Intent(MainActivity.this, ChangePassword.class);
                 startActivity(intent);
             }

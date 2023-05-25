@@ -7,11 +7,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.ViewModel;
 
 import com.example.reminisce_ticketing.MainActivity;
-import com.example.reminisce_ticketing.SharedPref;
+import com.example.reminisce_ticketing.utils.SharedPref;
 import com.example.reminisce_ticketing.apiservice.ApiInterface;
 import com.example.reminisce_ticketing.apiservice.RetrofitClient;
 import com.example.reminisce_ticketing.auth.forget.ForgetActivity;

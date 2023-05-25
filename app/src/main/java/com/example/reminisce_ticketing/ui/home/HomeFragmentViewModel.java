@@ -1,21 +1,15 @@
 package com.example.reminisce_ticketing.ui.home;
 
-import static java.security.AccessController.getContext;
-
 import android.content.Intent;
 import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.ViewModel;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.reminisce_ticketing.SharedPref;
+import com.example.reminisce_ticketing.utils.SharedPref;
 import com.example.reminisce_ticketing.adapter.HomeItemAdapter;
 import com.example.reminisce_ticketing.apiservice.ApiInterface;
 import com.example.reminisce_ticketing.apiservice.RetrofitClient;
@@ -46,7 +40,6 @@ public class HomeFragmentViewModel extends ViewModel {
         binding.searchText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(activity, "Clicked", Toast.LENGTH_SHORT).show();
                 String query = binding.etSearch.getText().toString();
                 adapter.search(query);
             }

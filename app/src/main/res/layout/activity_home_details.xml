@@ -32,7 +32,7 @@
                     android:id="@+id/iv_back"
                     android:layout_width="@dimen/_30sdp"
                     android:layout_height="@dimen/_30sdp"
-                    android:layout_marginLeft="@dimen/_11sdp"
+                    android:layout_marginStart="@dimen/_11sdp"
                     android:layout_marginTop="@dimen/_15sdp"
                     android:scaleType="fitXY"
                     android:src="@drawable/ic_back" />
@@ -46,10 +46,9 @@
                     android:layout_marginTop="@dimen/_10sdp"
                     android:layout_marginRight="@dimen/_10sdp"
                     android:fontFamily="@font/nunitosans_10pt_bold"
-                    android:text="Musical Merriments"
+                    android:text="@string/musical_merriments"
                     android:textColor="@color/black"
-                    android:textFontWeight="700"
-                    android:textSize="@dimen/_20sdp" />
+                    android:textSize="@dimen/_20ssp" />
 
                 <TextView
                     android:id="@+id/txt_date"
@@ -61,15 +60,14 @@
                     android:layout_marginRight="@dimen/_10sdp"
                     android:fontFamily="@font/nunitosans_10pt_bold"
                     android:text="16 May 2023"
-                    android:textColor="#A2AEC1"
-                    android:textFontWeight="400"
-                    android:textSize="@dimen/_14sdp" />
+                    android:textColor="@color/decription_txt_color"
+                    android:textSize="@dimen/_14ssp" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_5sdp"
                     android:layout_below="@+id/txt_date"
-                    android:background="#EBF4F9" />
+                    android:background="@color/dvider_color" />
 
                 <TextView
                     android:id="@+id/txt_description"
@@ -80,10 +78,9 @@
                     android:layout_marginTop="@dimen/_10sdp"
                     android:layout_marginRight="@dimen/_10sdp"
                     android:fontFamily="@font/nunitosans_10pt_bold"
-                    android:text="Description"
+                    android:text="@string/description"
                     android:textColor="@color/black"
-                    android:textFontWeight="600"
-                    android:textSize="@dimen/_14sdp" />
+                    android:textSize="@dimen/_14ssp" />
 
                 <TextView
                     android:id="@+id/description"
@@ -96,14 +93,26 @@
                     android:layout_marginBottom="@dimen/_50sdp"
                     android:fontFamily="@font/nunitosans_10pt_bold"
                     android:text="@string/description_value"
-                    android:textColor="#A2AEC1"
-                    android:textFontWeight="400"
-                    android:textSize="@dimen/_14sdp" />
+                    android:textColor="@color/decription_txt_color"
+
+                    android:textSize="@dimen/_14ssp" />
             </RelativeLayout>
         </androidx.core.widget.NestedScrollView>
 
-        <LinearLayout
+
+        <Button
             android:id="@+id/scan_ticket"
+            style="@style/PrimaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_49sdp"
+            android:layout_alignParentBottom="true"
+            android:textSize="@dimen/_13ssp"
+            android:text="@string/scan_tickets"
+            android:layout_marginLeft="@dimen/_50sdp"
+            android:layout_marginRight="@dimen/_50sdp"
+            android:layout_marginBottom="@dimen/_5sdp" />
+        <!--<LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="@dimen/_40sdp"
             android:layout_alignParentBottom="true"
@@ -123,9 +132,9 @@
                 android:text="Scan Tickets"
                 android:textColor="@color/white"
                 android:textFontWeight="700"
-                android:textSize="@dimen/_14sdp" />
+                android:textSize="@dimen/_14ssp" />
 
-        </LinearLayout>
+        </LinearLayout>-->
     </RelativeLayout>
 
 </layout>

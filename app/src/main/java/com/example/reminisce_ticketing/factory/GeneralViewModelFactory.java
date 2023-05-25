@@ -11,6 +11,7 @@ import com.example.reminisce_ticketing.auth.login.LoginViewModel;
 import com.example.reminisce_ticketing.ui.change_password.ChangePasswordViewModel;
 import com.example.reminisce_ticketing.ui.home.HomeFragmentViewModel;
 import com.example.reminisce_ticketing.ui.homedetails.HomeDetailsViewModel;
+import com.example.reminisce_ticketing.ui.scanResult.ScanResultViewModel;
 
 public class GeneralViewModelFactory<T> implements ViewModelProvider.Factory {
 
@@ -41,6 +42,9 @@ public class GeneralViewModelFactory<T> implements ViewModelProvider.Factory {
         }
         if (modelClass.isAssignableFrom(MainActivityViewModel.class)) {
             return (T) new MainActivityViewModel(binding, activity);
+        }
+        if (modelClass.isAssignableFrom(ScanResultViewModel.class)) {
+            return (T) new ScanResultViewModel(binding, activity);
         }
         return ViewModelProvider.Factory.super.create(modelClass);
     }

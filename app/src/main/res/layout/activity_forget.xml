@@ -35,7 +35,7 @@
                 android:textFontWeight="800"
                 android:textStyle="bold"
                 android:fontFamily="@font/nunitosans_10pt_bold"
-                android:textSize="@dimen/_20sdp" />
+                android:textSize="@dimen/_20ssp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -44,9 +44,9 @@
                 android:layout_marginTop="@dimen/_5sdp"
                 android:textFontWeight="400"
                 android:fontFamily="@font/nunitosans_10pt_bold"
-                android:text="Enter your email to reset your password"
-                android:textColor="#A2AEC1"
-                android:textSize="@dimen/_14sdp" />
+                android:text="@string/reset_your_password"
+                android:textColor="@color/decription_txt_color"
+                android:textSize="@dimen/_14ssp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -57,7 +57,7 @@
                 android:textColor="@color/black"
                 android:textFontWeight="400"
                 android:fontFamily="@font/nunitosans_7pt_regular"
-                android:textSize="@dimen/_12sdp" />
+                android:textSize="@dimen/_12ssp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -87,28 +87,27 @@
                     android:hint="Enter email" />
 
             </LinearLayout>
-
-            <LinearLayout
+            <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_40sdp"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_8sdp"
+                android:hint="@string/enter_email"
+                android:background="@drawable/bg_rounded_white">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+            <Button
+                android:id="@+id/forget_request"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/request"
                 android:layout_marginTop="@dimen/_20sdp"
-                android:orientation="vertical"
-                android:background="@drawable/bg_rounded_blue"
-                android:gravity="center_vertical">
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp"
+                android:background="@drawable/bg_rounded_blue">
 
-                <TextView
-                    android:id="@+id/forget_request"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="Request"
-                    android:textColor="@color/white"
-                    android:textFontWeight="700"
-                    android:fontFamily="@font/nunitosans_7pt_regular"
-                    android:textSize="@dimen/_14sdp" />
-
-            </LinearLayout>
+            </Button>
 
             <TextView
                 android:id="@+id/tv_login"
@@ -116,11 +115,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/_8sdp"
-                android:text="Log in"
+                android:text="@string/log_in"
                 android:textColor="#2F34B2"
-                android:textFontWeight="700"
                 android:fontFamily="@font/nunitosans_7pt_regular"
-                android:textSize="@dimen/_14sdp" />
+                android:textSize="@dimen/_14ssp" />
 
         </LinearLayout>
 

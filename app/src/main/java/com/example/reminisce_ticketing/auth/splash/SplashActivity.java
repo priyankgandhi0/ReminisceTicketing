@@ -8,7 +8,7 @@ import android.os.Handler;
 
 import com.example.reminisce_ticketing.MainActivity;
 import com.example.reminisce_ticketing.R;
-import com.example.reminisce_ticketing.SharedPref;
+import com.example.reminisce_ticketing.utils.SharedPref;
 import com.example.reminisce_ticketing.auth.login.LoginActivity;
 
 public class SplashActivity extends AppCompatActivity {

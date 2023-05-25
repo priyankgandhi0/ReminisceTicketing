@@ -16,5 +16,23 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="request">Request</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="notification_s">Notification\'s</string>
+    <string name="change_password">Change Password</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="change">Change</string>
+    <string name="event_list">Event List</string>
+    <string name="search">Search</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="valid_ticket">Valid Ticket \n Please allow the patron to enter</string>
+    <string name="musical_merriments">Musical Merriments</string>
+    <string name="description">Description</string>
+    <string name="reset_your_password">Enter your email to reset your password</string>
+    <string name="log_in">Log in</string>
+    <string name="scan_tickets">Scan Tickets</string>
 
 </resources>
