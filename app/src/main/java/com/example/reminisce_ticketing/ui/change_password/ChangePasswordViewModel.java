@@ -1,5 +1,6 @@
 package com.example.reminisce_ticketing.ui.change_password;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
 import android.view.View;
@@ -23,10 +24,10 @@ import retrofit2.Response;
 
 public class ChangePasswordViewModel extends ViewModel {
     ChangePasswordBinding binding;
-    FragmentActivity activity;
+    Activity activity;
 
 
-    public <T> ChangePasswordViewModel(T binding, FragmentActivity activity) {
+    public <T> ChangePasswordViewModel(T binding, Activity activity) {
         this.binding = ((ChangePasswordBinding) binding);
         this.activity = activity;
         initView();

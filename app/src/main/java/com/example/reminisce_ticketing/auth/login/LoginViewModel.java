@@ -1,5 +1,6 @@
 package com.example.reminisce_ticketing.auth.login;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
 import android.view.View;
@@ -25,9 +26,9 @@ import retrofit2.Response;
 public class LoginViewModel extends ViewModel {
 
     ActivityLoginBinding binding;
-    FragmentActivity activity;
+    Activity activity;
 
-    public <T> LoginViewModel(T binding, FragmentActivity activity) {
+    public <T> LoginViewModel(T binding, Activity activity) {
         this.binding = ((ActivityLoginBinding) binding);
         this.activity = activity;
 

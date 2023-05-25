@@ -5,9 +5,11 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.reminisce_ticketing.MainActivityViewModel;
 import com.example.reminisce_ticketing.auth.forget.ForgetViewModel;
 import com.example.reminisce_ticketing.auth.login.LoginViewModel;
 import com.example.reminisce_ticketing.ui.change_password.ChangePasswordViewModel;
+import com.example.reminisce_ticketing.ui.home.HomeFragmentViewModel;
 import com.example.reminisce_ticketing.ui.homedetails.HomeDetailsViewModel;
 
 public class GeneralViewModelFactory<T> implements ViewModelProvider.Factory {
@@ -33,6 +35,12 @@ public class GeneralViewModelFactory<T> implements ViewModelProvider.Factory {
             return (T) new ChangePasswordViewModel(binding, activity);
         } if (modelClass.isAssignableFrom(ForgetViewModel.class)) {
             return (T) new ForgetViewModel(binding, activity);
+        }
+        if (modelClass.isAssignableFrom(HomeFragmentViewModel.class)) {
+            return (T) new HomeFragmentViewModel(binding, activity);
+        }
+        if (modelClass.isAssignableFrom(MainActivityViewModel.class)) {
+            return (T) new MainActivityViewModel(binding, activity);
         }
         return ViewModelProvider.Factory.super.create(modelClass);
     }

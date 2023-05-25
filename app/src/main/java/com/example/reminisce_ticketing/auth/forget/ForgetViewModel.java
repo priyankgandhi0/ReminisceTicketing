@@ -1,24 +1,18 @@
 package com.example.reminisce_ticketing.auth.forget;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.ViewModel;
-
-import com.example.reminisce_ticketing.MainActivity;
-import com.example.reminisce_ticketing.R;
-import com.example.reminisce_ticketing.SharedPref;
 import com.example.reminisce_ticketing.apiservice.ApiInterface;
 import com.example.reminisce_ticketing.apiservice.RetrofitClient;
 import com.example.reminisce_ticketing.auth.login.LoginActivity;
 import com.example.reminisce_ticketing.databinding.ActivityForgetBinding;
-import com.example.reminisce_ticketing.databinding.ActivityLoginBinding;
 import com.example.reminisce_ticketing.model.ForgetRespo;
 import com.example.reminisce_ticketing.model.UserLoginReq;
-import com.example.reminisce_ticketing.model.UserLoginRespo;
 
 import java.util.List;
 import java.util.Map;
@@ -29,9 +23,9 @@ import retrofit2.Response;
 
 public class ForgetViewModel extends ViewModel {
     ActivityForgetBinding binding;
-    FragmentActivity activity;
+    Activity activity;
 
-    public <T> ForgetViewModel(T binding, FragmentActivity activity) {
+    public <T> ForgetViewModel(T binding, Activity activity) {
         this.binding = ((ActivityForgetBinding) binding);
         this.activity = activity;
 

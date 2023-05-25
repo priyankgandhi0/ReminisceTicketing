@@ -68,9 +68,7 @@ public class HomeItemAdapter extends RecyclerView.Adapter<HomeItemAdapter.ViewHo
         if (filteredList!=null){
             return filteredList.size();
         }else {
-
             return itemList.size();
-
         }
 
     }

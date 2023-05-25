@@ -7,7 +7,6 @@ import androidx.lifecycle.ViewModelProvider;
 import android.os.Bundle;
 
 import com.example.reminisce_ticketing.R;
-import com.example.reminisce_ticketing.auth.login.LoginViewModel;
 import com.example.reminisce_ticketing.databinding.ActivityHomeDetailsBinding;
 import com.example.reminisce_ticketing.factory.GeneralViewModelFactory;
 

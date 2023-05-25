@@ -1,5 +1,6 @@
 package com.example.reminisce_ticketing.ui.homedetails;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
 import android.view.View;
@@ -25,9 +26,9 @@ import retrofit2.Response;
 
 public class HomeDetailsViewModel extends ViewModel {
     ActivityHomeDetailsBinding binding;
-    FragmentActivity activity;
+    Activity activity;
 
-    public <T> HomeDetailsViewModel(T binding, FragmentActivity activity) {
+    public <T> HomeDetailsViewModel(T binding, Activity activity) {
         this.binding = ((ActivityHomeDetailsBinding) binding);
         this.activity = activity;
 
