@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void initView() {
-        findViewById(R.id.menuButton).setOnClickListener(new View.OnClickListener() {
+        binding.menuButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 binding.drawerLayout.open();
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 //                startActivity(intent);
 //            }
 //        });
-        findViewById(R.id.home_item).setOnClickListener(new View.OnClickListener() {
+        binding.nvItem.homeItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 binding.drawerLayout.close();

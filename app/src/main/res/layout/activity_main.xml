@@ -2,6 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+
         <variable
             name="viewModel"
             type="com.example.reminisce_ticketing.MainActivityViewModel" />
@@ -10,90 +11,92 @@
     <androidx.drawerlayout.widget.DrawerLayout
         android:id="@+id/drawerLayout"
         android:layout_width="match_parent"
-        android:background="@color/bg_color"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/bg_color">
 
         <!-- Main content layout -->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-           <!-- <LinearLayout
-                android:id="@+id/ll_main"
-                android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:layout_marginRight="@dimen/_12sdp"
-                android:background="@color/bg_color"
-                android:layout_marginLeft="@dimen/_12sdp"
-                android:layout_marginBottom="@dimen/_10sdp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_height="@dimen/_40sdp">
+            <!-- <LinearLayout
+                 android:id="@+id/ll_main"
+                 android:layout_width="match_parent"
+                 android:orientation="horizontal"
+                 android:layout_marginTop="@dimen/_5sdp"
+                 android:layout_marginRight="@dimen/_12sdp"
+                 android:background="@color/bg_color"
+                 android:layout_marginLeft="@dimen/_12sdp"
+                 android:layout_marginBottom="@dimen/_10sdp"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toTopOf="parent"
+                 android:layout_height="@dimen/_40sdp">
 
-                <ImageView
-                    android:id="@+id/menuButton"
-                    android:layout_width="@dimen/_35sdp"
-                    android:layout_height="@dimen/_35sdp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_menu" />
+                 <ImageView
+                     android:id="@+id/menuButton"
+                     android:layout_width="@dimen/_35sdp"
+                     android:layout_height="@dimen/_35sdp"
+                     android:layout_gravity="center"
+                     android:src="@drawable/ic_menu" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:layout_gravity="center"
-                    android:textStyle="bold"
-                    android:textFontWeight="800"
-                    android:fontFamily="@font/nunitosans_10pt_bold"
-                    android:textColor="@color/black"
-                    android:text="Home"
-                    android:textSize="@dimen/_15ssp" />
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:gravity="center"
+                     android:layout_weight="1"
+                     android:layout_gravity="center"
+                     android:textStyle="bold"
+                     android:textFontWeight="800"
+                     android:fontFamily="@font/nunitosans_10pt_bold"
+                     android:textColor="@color/black"
+                     android:text="Home"
+                     android:textSize="@dimen/_15ssp" />
 
-                <ImageView
-                    android:id="@+id/iv_notification"
-                    android:layout_width="@dimen/_35sdp"
-                    android:layout_height="@dimen/_35sdp"
-                    android:layout_gravity="center"
-                    android:visibility="gone"
-                    android:src="@drawable/ic_notification" />
-            </LinearLayout>-->
+                 <ImageView
+                     android:id="@+id/iv_notification"
+                     android:layout_width="@dimen/_35sdp"
+                     android:layout_height="@dimen/_35sdp"
+                     android:layout_gravity="center"
+                     android:visibility="gone"
+                     android:src="@drawable/ic_notification" />
+             </LinearLayout>-->
             <ImageView
                 android:id="@+id/menuButton"
                 android:layout_width="@dimen/_35sdp"
                 android:layout_height="@dimen/_35sdp"
                 android:layout_gravity="center"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:src="@drawable/ic_menu"
                 android:layout_marginStart="@dimen/_12sdp"
-                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:src="@drawable/ic_menu"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_35sdp"
-                android:gravity="center"
-                android:layout_weight="1"
                 android:layout_gravity="center"
-                android:textStyle="bold"
-                android:fontFamily="@font/nunitosans_10pt_bold"
-                android:textColor="@color/black"
-                android:text="@string/home"
                 android:layout_marginTop="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/nunitosans_10pt_bold"
+                android:gravity="center"
+                android:text="@string/home"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:textSize="@dimen/_15ssp" />
+                app:layout_constraintTop_toTopOf="parent" />
+
             <FrameLayout
                 android:id="@+id/fragmentContainer"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="@dimen/_45sdp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/menuButton"/>
+                app:layout_constraintTop_toBottomOf="@+id/menuButton" />
 
 
             <!-- Add your main content here -->
@@ -108,7 +111,9 @@
             android:background="@color/white">
 
             <!-- Include your custom navigation drawer layout -->
-            <include layout="@layout/layout_drawer" />
+            <include
+                android:id="@+id/nvItem"
+                layout="@layout/layout_drawer" />
 
         </com.google.android.material.navigation.NavigationView>
 

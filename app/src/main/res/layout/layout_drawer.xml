@@ -142,6 +142,7 @@
             android:layout_height="@dimen/_40sdp"
             android:layout_marginLeft="@dimen/_7sdp"
             android:layout_marginRight="@dimen/_7sdp"
+            android:visibility="gone"
             android:orientation="horizontal">
 
             <ImageView
