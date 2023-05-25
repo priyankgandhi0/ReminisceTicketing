@@ -30,7 +30,7 @@
         <item name="android:gravity">center</item>
 
         <item name="android:textColor">@color/white</item>
-        <item name="android:fontFamily">@font/nunitosans_7pt_bold</item>
+        <item name="android:fontFamily">@font/nunitosans_10pt_bold</item>
         <item name="android:textDirection">locale</item>
 
     </style>
