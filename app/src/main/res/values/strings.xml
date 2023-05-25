@@ -16,6 +16,14 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="reminisce_scanner">Reminisce Scanner</string>
+    <string name="enter_your_details_below_to_scan_tickets">Enter your details below to scan tickets.</string>
+    <string name="email">E-mail</string>
+    <string name="password">Password</string>
+    <string name="enter_password">Enter password</string>
+    <string name="forget_password">Forget password?</string>
+    <string name="enter_your_email_to_reset_your_password">Enter your email to reset your password</string>
+
     <string name="request">Request</string>
     <string name="enter_email">Enter Email</string>
     <string name="forgot_password">Forgot Password?</string>

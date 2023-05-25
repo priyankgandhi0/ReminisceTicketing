@@ -10,4 +10,10 @@
     <color name="dvider_color">#EBF4F9</color>
     <color name="decription_txt_color">#A2AEC1</color>
     <color name="bg_color">#F7FBFD</color>
+
+
+    <color name="colorBlue">#2F34B2</color>
+    <color name="colorGrayText">#B5C2CC</color>
+    <color name="colorBlueLightBack">#FBFDFF</color>
+
 </resources>
