@@ -35,7 +35,7 @@ public class LoginViewModel extends ViewModel {
     }
 
     private void initView() {
-        binding.forgetPassword.setOnClickListener(new View.OnClickListener() {
+        binding.tvForgetPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(activity, ForgetActivity.class);
@@ -44,7 +44,7 @@ public class LoginViewModel extends ViewModel {
             }
         });
 
-        binding.login.setOnClickListener(new View.OnClickListener() {
+        binding.btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (binding.etPassword.getText().toString().isEmpty() || binding.etEmail.getText().toString().isEmpty()) {

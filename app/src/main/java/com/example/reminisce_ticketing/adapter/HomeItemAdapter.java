@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -117,15 +118,15 @@ public class HomeItemAdapter extends RecyclerView.Adapter<HomeItemAdapter.ViewHo
     }
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView itemTitle;
-        LinearLayout item_click;
+        ConstraintLayout item_click;
         TextView itemDescription;
         ImageView eventImage;
         public ViewHolder(View itemView) {
             super(itemView);
-            itemTitle = itemView.findViewById(R.id.itemTitle);
-            itemDescription = itemView.findViewById(R.id.itemDate);
-            item_click = itemView.findViewById(R.id.item_click);
-            eventImage = itemView.findViewById(R.id.event_image);
+            itemTitle = itemView.findViewById(R.id.tvItemTitle);
+            itemDescription = itemView.findViewById(R.id.tvItemDate);
+            item_click = itemView.findViewById(R.id.itemClick);
+            eventImage = itemView.findViewById(R.id.ivImage);
 
         }
     }
