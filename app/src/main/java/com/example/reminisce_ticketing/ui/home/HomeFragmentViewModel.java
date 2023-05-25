@@ -41,18 +41,17 @@ public class HomeFragmentViewModel extends ViewModel {
     }
 
 
-//    public void searchText(){
-//        binding.searchText.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Toast.makeText(activity, "Clicked", Toast.LENGTH_SHORT).show();
-//                String query = binding.etSearch.getText().toString();
-//                adapter.search(query);
-//            }
-//        });
-//    }
     private void initView() {
         getEventList();
+        binding.searchText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(activity, "Clicked", Toast.LENGTH_SHORT).show();
+                String query = binding.etSearch.getText().toString();
+                adapter.search(query);
+            }
+        });
+
     }
 
     private void getEventList() {
