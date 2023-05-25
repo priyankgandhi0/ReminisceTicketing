@@ -1,32 +1,26 @@
 package com.example.reminisce_ticketing.ui.homedetails;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+import androidx.lifecycle.ViewModelProvider;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
 import com.example.reminisce_ticketing.R;
-import com.example.reminisce_ticketing.ui.scan_with_camera.ScanWithCamera;
+import com.example.reminisce_ticketing.auth.login.LoginViewModel;
+import com.example.reminisce_ticketing.databinding.ActivityHomeDetailsBinding;
+import com.example.reminisce_ticketing.factory.GeneralViewModelFactory;
 
 public class HomeDetailsActivity extends AppCompatActivity {
 
+    ActivityHomeDetailsBinding binding;
+    HomeDetailsViewModel viewModel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_details);
-        findViewById(R.id.scan_ticket).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(HomeDetailsActivity.this, ScanWithCamera.class);
-                startActivity(intent);
-            }
-        });
-        findViewById(R.id.iv_back).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressed();
-            }
-        });
+
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_home_details);
+        viewModel = new ViewModelProvider(this, new GeneralViewModelFactory<>(binding, this)).get(HomeDetailsViewModel.class);
+
     }
 }

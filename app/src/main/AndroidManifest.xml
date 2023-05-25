@@ -24,6 +24,9 @@
             android:label="@string/title_activity_scan_result"
             android:theme="@style/Theme.ReminisceTicketing.NoActionBar" />
         <activity
+            android:name=".ui.notification.Notification"
+            android:exported="false" />
+        <activity
             android:name=".ui.change_password.ChangePassword"
             android:exported="false" />
         <activity

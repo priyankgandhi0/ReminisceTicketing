@@ -6,7 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.example.reminisce_ticketing.MainActivity;
 import com.example.reminisce_ticketing.R;
+import com.example.reminisce_ticketing.SharedPref;
 import com.example.reminisce_ticketing.auth.login.LoginActivity;
 
 public class SplashActivity extends AppCompatActivity {
@@ -20,11 +22,15 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
                 // Start your main activity or any other desired activity here
-                Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
-                startActivity(intent);
-
-                // Finish the splash screen activity
-                finish();
+                if (!SharedPref.getBoolean(SharedPref.IsUserLogin, getApplicationContext())) {
+                    Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                    finish();
+                }else{
+                    Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
             }
         }, 2000); // Del
     }

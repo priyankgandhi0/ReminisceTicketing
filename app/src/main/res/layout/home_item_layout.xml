@@ -3,20 +3,21 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:layout_marginBottom="5dp"
+    android:layout_marginBottom="@dimen/_5sdp"
     android:id="@+id/item_click"
     android:background="@drawable/bg_rounded_white_10"
-    android:padding="10dp">
+    android:padding="@dimen/_8sdp">
 
     <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:id="@+id/event_image"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
         android:src="@drawable/ic_image"/>
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="@dimen/_8sdp"
         android:layout_gravity="center"
         android:orientation="vertical">
         <TextView
@@ -24,22 +25,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:padding="2dp"
-            android:fontFamily="@font/nunito_regular"
-            android:textSize="16sp"/>
+            android:padding="@dimen/_2sdp"
+            android:fontFamily="@font/nunitosans_7pt_semibold"
+            android:textSize="@dimen/_12sdp"/>
         <TextView
             android:id="@+id/itemDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="2dp"
+            android:padding="@dimen/_2sdp"
             android:textColor="@color/black"
-            android:fontFamily="@font/nunito_regular"
-            android:textSize="16sp"/>
+            android:fontFamily="@font/nunitosans_7pt_semibold"
+            android:textSize="@dimen/_12sdp"/>
 
     </LinearLayout>
     <ImageView
-        android:layout_width="15dp"
-        android:layout_height="15dp"
+        android:layout_width="@dimen/_13sdp"
+        android:layout_height="@dimen/_13sdp"
         android:layout_gravity="center"
         android:src="@drawable/ic_right"/>
 

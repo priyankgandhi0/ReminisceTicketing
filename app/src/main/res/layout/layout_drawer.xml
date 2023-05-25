@@ -13,22 +13,22 @@
         android:textColor="@color/black"
         android:layout_gravity="center"
         android:gravity="center"
-        android:textSize="20sp"
-        android:layout_marginTop="10dp"
+        android:textSize="@dimen/_17sdp"
+        android:layout_marginTop="@dimen/_8sdp"
         android:fontFamily="@font/nunitosans_10pt_bold"
         />
     <LinearLayout
         android:id="@+id/home_item"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginLeft="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:layout_marginRight="@dimen/_7sdp"
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
+            android:layout_width="@dimen/_23sdp"
+            android:layout_height="@dimen/_23sdp"
             android:layout_gravity="center"
             android:src="@drawable/ic_home"
             app:tint="#2F34B2" />
@@ -38,32 +38,32 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="@dimen/_11sdp"
             android:fontFamily="@font/nunito_regular"
             android:gravity="left"
             android:text="Home"
             android:textColor="@color/black"
             android:textFontWeight="800"
-            android:textSize="16sp"
+            android:textSize="@dimen/_11sdp"
             android:textStyle="bold" />
 
         <ImageView
-            android:layout_width="15dp"
-            android:layout_height="15dp"
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_12sdp"
             android:layout_gravity="center"
             android:src="@drawable/ic_right" />
     </LinearLayout>
     <LinearLayout
         android:id="@+id/scan_item"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginLeft="@dimen/_7sdp"
+        android:layout_marginRight="@dimen/_7sdp"
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
+            android:layout_width="@dimen/_23sdp"
+            android:layout_height="@dimen/_23sdp"
             android:layout_gravity="center"
             android:src="@drawable/ic_scaner"
             app:tint="#2F34B2" />
@@ -73,33 +73,34 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:layout_marginLeft="15dp"
             android:fontFamily="@font/nunito_regular"
             android:gravity="left"
             android:text="Scan Ticket"
             android:textColor="@color/black"
             android:textFontWeight="800"
-            android:textSize="16sp"
+            android:layout_marginLeft="@dimen/_11sdp"
+            android:textSize="@dimen/_11sdp"
             android:textStyle="bold" />
 
         <ImageView
-            android:layout_width="15dp"
-            android:layout_height="15dp"
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_12sdp"
             android:layout_gravity="center"
             android:src="@drawable/ic_right" />
+
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/change_password"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginLeft="@dimen/_7sdp"
+        android:layout_marginRight="@dimen/_7sdp"
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
+            android:layout_width="@dimen/_23sdp"
+            android:layout_height="@dimen/_23sdp"
             android:layout_gravity="center"
             android:src="@drawable/ic_password"
             app:tint="#2F34B2" />
@@ -109,32 +110,32 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:layout_marginLeft="15dp"
             android:fontFamily="@font/nunito_regular"
             android:gravity="left"
             android:text="Change Password"
             android:textColor="@color/black"
             android:textFontWeight="800"
-            android:textSize="16sp"
+            android:layout_marginLeft="@dimen/_11sdp"
+            android:textSize="@dimen/_11sdp"
             android:textStyle="bold" />
 
         <ImageView
-            android:layout_width="15dp"
-            android:layout_height="15dp"
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_12sdp"
             android:layout_gravity="center"
             android:src="@drawable/ic_right" />
     </LinearLayout>
     <LinearLayout
         android:id="@+id/help_item"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginLeft="@dimen/_7sdp"
+        android:layout_marginRight="@dimen/_7sdp"
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
+            android:layout_width="@dimen/_23sdp"
+            android:layout_height="@dimen/_23sdp"
             android:layout_gravity="center"
             android:src="@drawable/ic_help"
             app:tint="#2F34B2" />
@@ -144,32 +145,32 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:layout_marginLeft="15dp"
             android:fontFamily="@font/nunito_regular"
             android:gravity="left"
             android:text="Help"
             android:textColor="@color/black"
             android:textFontWeight="800"
-            android:textSize="16sp"
+            android:layout_marginLeft="@dimen/_11sdp"
+            android:textSize="@dimen/_11sdp"
             android:textStyle="bold" />
 
         <ImageView
-            android:layout_width="15dp"
-            android:layout_height="15dp"
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_12sdp"
             android:layout_gravity="center"
             android:src="@drawable/ic_right" />
     </LinearLayout>
     <LinearLayout
         android:id="@+id/logout"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginLeft="@dimen/_7sdp"
+        android:layout_marginRight="@dimen/_7sdp"
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
+            android:layout_width="@dimen/_23sdp"
+            android:layout_height="@dimen/_23sdp"
             android:layout_gravity="center"
             android:src="@drawable/ic_logout"
             app:tint="#2F34B2" />
@@ -179,18 +180,18 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:layout_marginLeft="15dp"
             android:fontFamily="@font/nunito_regular"
             android:gravity="left"
             android:text="Log out"
             android:textColor="@color/black"
             android:textFontWeight="800"
-            android:textSize="16sp"
+            android:layout_marginLeft="@dimen/_11sdp"
+            android:textSize="@dimen/_11sdp"
             android:textStyle="bold" />
 
         <ImageView
-            android:layout_width="15dp"
-            android:layout_height="15dp"
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_12sdp"
             android:layout_gravity="center"
             android:src="@drawable/ic_right" />
     </LinearLayout>

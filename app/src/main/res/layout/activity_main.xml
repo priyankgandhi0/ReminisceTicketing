@@ -12,16 +12,16 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="horizontal"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="15dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_12sdp"
             android:background="@color/white"
-            android:layout_marginLeft="15dp"
-            android:layout_marginBottom="10dp"
-            android:layout_height="50dp">
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_height="@dimen/_40sdp">
             <ImageView
                 android:id="@+id/menuButton"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
                 android:layout_gravity="center"
                 android:src="@drawable/ic_menu"/>
 
@@ -36,10 +36,11 @@
                 android:fontFamily="@font/nunitosans_10pt_bold"
                 android:textColor="@color/black"
                 android:text="Home"
-                android:textSize="22sp" />
+                android:textSize="@dimen/_18sdp" />
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:id="@+id/iv_notification"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
                 android:layout_gravity="center"
                 android:src="@drawable/ic_notification"/>
         </LinearLayout>
@@ -47,12 +48,14 @@
             android:id="@+id/fragmentContainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
+
+
         <!-- Add your main content here -->
 
     </LinearLayout>
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigationView"
-        android:layout_width="300dp"
+        android:layout_width="@dimen/_250sdp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:background="@color/white">
