@@ -44,4 +44,13 @@
     <string name="scan_tickets">Scan Tickets</string>
     <string name="home">Home</string>
 
+   <string name="invalid_data">Invalid data</string>
+   <string name="invalid_ticket">Invalid ticket</string>
+   <string name="ticket_Invalid_Already_scanned_in">Ticket Invalid\n
+Already scanned in</string>
+   <string name="ticket_Invalid_Not_found_in_the_system"> Ticket Invalid\n
+   Not found in the system</string>
+
+
+
 </resources>

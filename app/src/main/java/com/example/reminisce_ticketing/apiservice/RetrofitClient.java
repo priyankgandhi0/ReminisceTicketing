@@ -18,6 +18,8 @@ public class RetrofitClient {
     public static Retrofit getClient(Context context) {
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
+        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+        httpClient.addInterceptor(interceptor);
         httpClient.addInterceptor((Interceptor) chain -> {
             Request original = chain.request();
             Request request;
@@ -47,8 +49,13 @@ public class RetrofitClient {
             return chain.proceed(request);
 
         });
+
         OkHttpClient client = httpClient.build();
-        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+
+
+
+
+
 //        OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
         return new Retrofit
                 .Builder()

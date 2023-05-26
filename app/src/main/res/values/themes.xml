@@ -1,21 +1,28 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.ReminisceTicketing" parent="Theme.MaterialComponents.Light.NoActionBar">
-
     <!-- Primary brand color. -->
-
-
         <item name="colorPrimary">@color/colorBlue</item>
         <item name="colorPrimaryVariant">@color/colorBlue</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
+        <item name="colorOnPrimary">@color/colorBlue</item>
+       <!-- &lt;!&ndash; Secondary brand color. &ndash;&gt;
         <item name="colorSecondary">@color/colorBlue</item>
         <item name="colorSecondaryVariant">@color/colorBlue</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="colorOnSecondary">@color/black</item>-->
         <!-- Customize your theme here. -->
+        <item name="android:statusBarColor">@color/colorBlueLightBack</item>
+        <item name="android:windowLightStatusBar">true</item>
     </style>
+
+    <style name="AppThemeForWhiteStatusBar" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorBlue</item>
+        <item name="colorPrimaryDark">@color/colorBlue</item>
+        <item name="colorAccent">@color/colorBlue</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:statusBarColor">@color/colorBlueLightBack</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
     <style name="Theme.ReminisceTicketing.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -137,11 +144,15 @@
         <item name="android:textDirection">locale</item>
     </style>
 
-    <style name="AppThemeForWhiteStatusBar" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="colorPrimary">@color/colorBlue</item>
-        <item name="colorPrimaryDark">@color/colorBlue</item>
-        <item name="colorAccent">@color/colorBlue</item>
-        <item name="android:windowTranslucentNavigation">true</item>
-        <item name="android:statusBarColor">@color/colorBlueLightBack</item>
+
+    <style name="TextInputLayoutStyleSearch" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/bg_color_text_input_layout</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/_10sdp</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/_10sdp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/_10sdp</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/_10sdp</item>
     </style>
+
+
 </resources>

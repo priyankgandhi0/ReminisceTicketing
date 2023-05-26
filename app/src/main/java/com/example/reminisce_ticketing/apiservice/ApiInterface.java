@@ -1,21 +1,20 @@
 package com.example.reminisce_ticketing.apiservice;
 
 
-
 import com.example.reminisce_ticketing.model.ChangePasswordReq;
 import com.example.reminisce_ticketing.model.ChangePasswordRespo;
-import com.example.reminisce_ticketing.model.ErrorResponse;
 import com.example.reminisce_ticketing.model.EventDetailsModel;
 import com.example.reminisce_ticketing.model.EventListModel;
 import com.example.reminisce_ticketing.model.ForgetRespo;
+import com.example.reminisce_ticketing.model.ScannerData;
 import com.example.reminisce_ticketing.model.UserLoginReq;
 import com.example.reminisce_ticketing.model.UserLoginRespo;
+import com.example.reminisce_ticketing.model.ValidationData;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
-import retrofit2.http.Headers;
 import retrofit2.http.POST;
 
 public interface ApiInterface {
@@ -28,6 +27,10 @@ public interface ApiInterface {
             "App-Os-Version:iOS 11",
             "App-Store-Build-Number:1.1"})*/
 //            "App-Secret:RESC5698745ravi"})
+
+    @POST("api/qrcode-validation")
+    Call<ValidationData> validation(@Body ScannerData data);
+
     @POST("api/stafflogin")
     Call<UserLoginRespo> userLogin(@Body UserLoginReq loginRequest);
 

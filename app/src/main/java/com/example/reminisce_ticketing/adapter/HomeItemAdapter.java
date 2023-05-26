@@ -17,8 +17,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.reminisce_ticketing.R;
+import com.example.reminisce_ticketing.constant.Constants;
 import com.example.reminisce_ticketing.model.EventListModel;
 import com.example.reminisce_ticketing.ui.homedetails.HomeDetailsActivity;
+import com.example.reminisce_ticketing.utils.Utils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,7 +46,7 @@ public class HomeItemAdapter extends RecyclerView.Adapter<HomeItemAdapter.ViewHo
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         EventListModel.Data item = itemList.get(position);
         holder.itemTitle.setText(item.name);
-        holder.itemDescription.setText(item.description);
+        holder.itemDescription.setText(Utils.GetDateOnRequireFormat(item.getEventStartDate(), Constants.DATE_YYYY_MM_DD_FORMAT,Constants.DATE_DD_MMMM_YYYY_FORMAT));
         holder.item_click.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
