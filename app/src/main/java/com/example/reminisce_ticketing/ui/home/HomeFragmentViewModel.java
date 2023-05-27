@@ -49,10 +49,12 @@ public class HomeFragmentViewModel extends ViewModel {
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (s.toString().trim().isEmpty()) {
+                Log.e("","onTextChanged : "+s);
+               // if (!s.toString().trim().isEmpty()) {
+                    Log.e("","onTextChanged 1 : "+s);
                     String query = binding.etSearch.getText().toString();
                     adapter.search(query);
-                }
+               // }
             }
             @Override
             public void afterTextChanged(Editable s) {
@@ -98,11 +100,12 @@ public class HomeFragmentViewModel extends ViewModel {
         call.enqueue(new Callback<EventListModel>() {
             @Override
             public void onResponse(Call<EventListModel> call, Response<EventListModel> response) {
+                binding.progressBar.setVisibility(View.GONE);
                 Log.e("Tag", "Response" + response.body());
                 if (response.isSuccessful()) {
                     Log.e("EventList","data"+response.body());
                     if (response.body()!=null){
-                        binding.progressBar.setVisibility(View.GONE);
+
                         binding.recyclerView.setVisibility(View.VISIBLE);
                         itemList=response.body().data;
                         Log.e("","itemList : "+new Gson().toJson(itemList));
@@ -111,7 +114,7 @@ public class HomeFragmentViewModel extends ViewModel {
                         binding.recyclerView.setAdapter(adapter);
                     }
                 }else {
-                    binding.progressBar.setVisibility(View.GONE);
+
                     SharedPref.saveBoolean(SharedPref.IsUserLogin, false, activity);
                     SharedPref.saveUserToken(null,activity);
                     Intent intent = new Intent(activity, LoginActivity.class);

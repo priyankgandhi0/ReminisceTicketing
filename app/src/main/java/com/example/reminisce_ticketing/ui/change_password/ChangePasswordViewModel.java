@@ -49,6 +49,7 @@ public class ChangePasswordViewModel extends ViewModel {
     }
 
     private void changePassword() {
+        binding.progressBar.setVisibility(View.VISIBLE);
         ChangePasswordReq changePasswordReq = new ChangePasswordReq();
         changePasswordReq.oldPassword = binding.oldPassword.getText().toString().trim();
         changePasswordReq.newPassword = binding.newPassword.getText().toString().trim();
@@ -60,6 +61,8 @@ public class ChangePasswordViewModel extends ViewModel {
         call.enqueue(new Callback<ChangePasswordRespo>() {
             @Override
             public void onResponse(Call<ChangePasswordRespo> call, Response<ChangePasswordRespo> response) {
+                binding.progressBar.setVisibility(View.GONE);
+
                 Log.e("Tag", "Response" + response.body());
                 if (response.isSuccessful()) {
                     ChangePasswordRespo changePasswordRespo = response.body();
@@ -143,7 +146,7 @@ public class ChangePasswordViewModel extends ViewModel {
 
             @Override
             public void onFailure(Call<ChangePasswordRespo> call, Throwable t) {
-
+                binding.progressBar.setVisibility(View.GONE);
             }
         });
     }

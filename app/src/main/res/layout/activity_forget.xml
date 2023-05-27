@@ -133,6 +133,8 @@
             android:layout_height="match_parent"
             android:background="@color/colorBlueLightBack">
 
+
+
             <ImageView
                 android:id="@+id/ivLogo"
                 android:layout_width="wrap_content"
@@ -203,11 +205,11 @@
                     android:background="@drawable/bg_rounded_white"
                     android:drawableStart="@drawable/ic_email"
                     android:drawablePadding="@dimen/_10sdp"
-                    android:hint="@string/enter_email"
                     android:inputType="textEmailAddress"
                     android:theme="@style/TextInputLayoutEditTextTheme" />
 
             </com.google.android.material.textfield.TextInputLayout>
+
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnRequest"
@@ -215,14 +217,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_15sdp"
-                android:layout_marginTop="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_50sdp"
                 android:layout_marginEnd="@dimen/_15sdp"
                 android:gravity="center"
                 android:text="@string/request"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tlEmail"
-                app:layout_constraintVertical_bias="0" />
+                app:layout_constraintVertical_bias="7" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tvLogin"
@@ -237,6 +239,16 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:text="@string/log_in"
                 android:textColor="@color/colorBlue"/>
+
+                <ProgressBar
+                    android:visibility="gone"
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

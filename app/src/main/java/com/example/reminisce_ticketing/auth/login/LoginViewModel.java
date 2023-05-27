@@ -17,6 +17,7 @@ import com.example.reminisce_ticketing.auth.forget.ForgetActivity;
 import com.example.reminisce_ticketing.databinding.ActivityLoginBinding;
 import com.example.reminisce_ticketing.model.UserLoginReq;
 import com.example.reminisce_ticketing.model.UserLoginRespo;
+import com.example.reminisce_ticketing.utils.Utils;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -58,6 +59,8 @@ public class LoginViewModel extends ViewModel {
     }
 
     private void CallApi(EditText etEmail, EditText etPassword) {
+        Utils.hideKeyBoard(activity);
+        binding.progressBar.setVisibility(View.VISIBLE);
 
 
         UserLoginReq userLoginReq = new UserLoginReq();
@@ -71,6 +74,7 @@ public class LoginViewModel extends ViewModel {
         call.enqueue(new Callback<UserLoginRespo>() {
             @Override
             public void onResponse(Call<UserLoginRespo> call, Response<UserLoginRespo> response) {
+                binding.progressBar.setVisibility(View.GONE);
                 Log.e("Tag", "Response" + response.body());
                 if (response.isSuccessful()) {
                     if (response.body()!=null&& response.body().code==200){
@@ -88,6 +92,7 @@ public class LoginViewModel extends ViewModel {
 
             @Override
             public void onFailure(Call<UserLoginRespo> call, Throwable t) {
+                binding.progressBar.setVisibility(View.GONE);
                 SharedPref.saveBoolean(SharedPref.IsUserLogin, false, activity);
             }
         });

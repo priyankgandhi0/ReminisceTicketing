@@ -100,7 +100,9 @@
         </androidx.core.widget.NestedScrollView>
 
 
-        <Button
+        <com.google.android.material.button.MaterialButton
+            android:drawableTint="@color/white"
+            android:drawableStart="@drawable/ic_scanner_small"
             android:id="@+id/scan_ticket"
             style="@style/PrimaryButton"
             android:layout_width="match_parent"
@@ -135,6 +137,14 @@
                 android:textSize="@dimen/_14ssp" />
 
         </LinearLayout>-->
+
+        <ProgressBar
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             />
     </RelativeLayout>
 
 </layout>

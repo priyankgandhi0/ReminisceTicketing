@@ -1,8 +1,12 @@
 package com.example.reminisce_ticketing.ui.scan_with_camera;
 
 import android.Manifest;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.PackageManager;
+import android.device.ScanDevice;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -47,6 +51,7 @@ public class ScanWithCamera extends AppCompatActivity {
     public ProgressBar progressBar;
     CodeScannerView scannerView;
     private CodeScanner mCodeScanner;
+    String barcodeStr;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +75,9 @@ public class ScanWithCamera extends AppCompatActivity {
             // Request camera permission if it's not granted
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, CAMERA_PERMISSION_REQUEST_CODE);
         }
+
+
+
     }
 
     @Override
@@ -120,8 +128,36 @@ public class ScanWithCamera extends AppCompatActivity {
         });
     }
 
+    private BroadcastReceiver mScanReceiver = new BroadcastReceiver() {
+        public void onReceive(Context context, Intent intent) {
+            byte[] barocode = intent.getByteArrayExtra("barocode");
+            int barocodelen = intent.getIntExtra("length", 0);
+           // byte temp = intent.getByteExtra("barcodeType", (byte)0);
+           // byte[] aimid = intent.getByteArrayExtra("aimid");
+            barcodeStr = new String(barocode, 0, barocodelen);
+           /* showScanResult.append("Broadcast：");
+            showScanResult.append(barcodeStr);
+            showScanResult.append("\n");
+            showScanResult.setText(barcodeStr);*/
+            if (barcodeStr != null && !barcodeStr.equals("")) {
+                try {
+                    Gson gson = new Gson();
+                    ScannerData p = gson.fromJson(barcodeStr, ScannerData.class);
+                    //Log.e("", "onDecoded_1 : " + new Gson().toJson(p));
+                    callApiValidation(p);
+                } catch (JsonSyntaxException e) {
+                    Utils.makeToast(getApplication(),getString(R.string.invalid_ticket));
+                }
+            } else {
+                Utils.makeToast(getApplication(),getString(R.string.invalid_data));
+            }
+           // Log.e("","BroadcastReceiver : "+barcodeStr);
+        }
+    };
+
     private void callApiValidation(ScannerData data) {
         progressBar.setVisibility(View.VISIBLE);
+        stopCamera();
         ApiInterface service = RetrofitClient.getClient(this).create(ApiInterface.class);
 
         Call<ValidationData> call = service.validation(data);
@@ -129,10 +165,12 @@ public class ScanWithCamera extends AppCompatActivity {
             @Override
             public void onResponse(Call<ValidationData> call, Response<ValidationData> response) {
                 progressBar.setVisibility(View.GONE);
+                startCamera();
                 Log.e("Tag", "Response" + response.body());
                 if (response.isSuccessful()) {
                     Log.e("EventList", "data" + response.body());
                     if (response.body() != null) {
+                       // stopCamera();
                          Intent intent = new Intent(ScanWithCamera.this, ScanResult.class);
                          intent.putExtra(Constants.data,new Gson().toJson(response.body()));
                          startActivity(intent);
@@ -146,6 +184,7 @@ public class ScanWithCamera extends AppCompatActivity {
             public void onFailure(Call<ValidationData> call, Throwable t) {
                 Log.e("","onFailure : "+t.getMessage());
                 progressBar.setVisibility(View.GONE);
+                startCamera();
                 Utils.makeToast(getApplication(),t.getMessage());
             }
         });
@@ -153,13 +192,25 @@ public class ScanWithCamera extends AppCompatActivity {
 
     @Override
     protected void onResume() {
+        startCamera();
         super.onResume();
+    }
+
+    public void startCamera(){
         mCodeScanner.startPreview();
+        IntentFilter filter = new IntentFilter();
+        filter.addAction("scan.rcv.message");
+        registerReceiver(mScanReceiver, filter);
+    }
+
+    public void stopCamera(){
+        mCodeScanner.releaseResources();
+        unregisterReceiver(mScanReceiver);
     }
 
     @Override
     protected void onPause() {
-        mCodeScanner.releaseResources();
+        stopCamera();
         super.onPause();
     }
 }

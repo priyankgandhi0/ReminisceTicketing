@@ -75,12 +75,13 @@ public class MainActivityViewModel extends ViewModel {
     }
 
     private void logOut() {
+        binding.progressBar.setVisibility(View.VISIBLE);
         ApiInterface service = RetrofitClient.getClient(activity).create(ApiInterface.class);
         Call<ResponseBody> call = service.logOut();
         call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-
+                binding.progressBar.setVisibility(View.GONE);
                 if (response.isSuccessful()){
                     SharedPref.saveBoolean(SharedPref.IsUserLogin, false, activity);
                     SharedPref.saveUserToken(null,activity);
@@ -93,7 +94,7 @@ public class MainActivityViewModel extends ViewModel {
 
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
-
+                binding.progressBar.setVisibility(View.GONE);
             }
         });
     }

@@ -39,6 +39,8 @@ public class ScanResult extends AppCompatActivity {
             setData();
         }
 
+        binding.ivBack.setOnClickListener(v -> onBackPressed());
+
     }
 
     public void setData(){
@@ -61,6 +63,6 @@ public class ScanResult extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        startActivity(new Intent(this, MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
+       finish();
     }
 }

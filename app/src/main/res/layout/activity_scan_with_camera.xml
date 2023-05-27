@@ -16,15 +16,13 @@
 
     <ImageView
         android:id="@+id/iv_back"
-        android:layout_width="@dimen/_28sdp"
-        android:layout_height="@dimen/_28sdp"
-        android:layout_marginStart="@dimen/_7sdp"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:padding="@dimen/_5sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:padding="@dimen/_13sdp"
         android:src="@drawable/ic_cancel"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
 
     <!--    <ImageView
             android:layout_width="30dp"

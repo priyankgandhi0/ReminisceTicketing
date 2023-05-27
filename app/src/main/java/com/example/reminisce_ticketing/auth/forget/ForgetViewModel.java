@@ -96,6 +96,8 @@ public class ForgetViewModel extends ViewModel {
     }
 
     private void forgetPasswordApiCall() {
+
+        binding.progressBar.setVisibility(View.VISIBLE);
         UserLoginReq userLoginReq = new UserLoginReq();
         userLoginReq.email = binding.etEmail.getText().toString().trim();
 
@@ -106,6 +108,7 @@ public class ForgetViewModel extends ViewModel {
             @Override
             public void onResponse(Call<ForgetRespo> call, Response<ForgetRespo> response) {
                 Log.e("Tag", "Response" + response.body());
+                binding.progressBar.setVisibility(View.GONE);
                 if (response.isSuccessful()) {
                     if (response.body() != null) {
                         if (response.body().code == 200) {
@@ -134,6 +137,7 @@ public class ForgetViewModel extends ViewModel {
 
             @Override
             public void onFailure(Call<ForgetRespo> call, Throwable t) {
+                binding.progressBar.setVisibility(View.GONE);
             }
         });
     }

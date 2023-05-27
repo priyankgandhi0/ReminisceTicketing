@@ -50,6 +50,7 @@ public class HomeDetailsViewModel extends ViewModel {
         });
     }
     private void getDetails(String slug) {
+        binding.progressBar.setVisibility(View.VISIBLE);
 
         UserLoginReq userLoginReq = new UserLoginReq();
         userLoginReq.slug = slug;
@@ -59,6 +60,7 @@ public class HomeDetailsViewModel extends ViewModel {
         call.enqueue(new Callback<EventDetailsModel>() {
             @Override
             public void onResponse(Call<EventDetailsModel> call, Response<EventDetailsModel> response) {
+                binding.progressBar.setVisibility(View.GONE);
                 Log.e("Tag", "Response" + response.body());
                 if (response.isSuccessful()) {
                     EventDetailsModel eventDetailsModel = response.body();
@@ -71,6 +73,7 @@ public class HomeDetailsViewModel extends ViewModel {
 
             @Override
             public void onFailure(Call<EventDetailsModel> call, Throwable t) {
+                binding.progressBar.setVisibility(View.GONE);
                 Log.e("Tag", "Response" + t.getMessage());
             }
         });
